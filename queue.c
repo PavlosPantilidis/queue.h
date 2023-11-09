@@ -1,10 +1,3 @@
-/*######################################*/
-/*                                      */
-/*       Name: Pavlos Pantilidis        */
-/*                                      */
-/*             AM: csd4709              */
-/*                                      */
-/*######################################*/
 #include "queue.h"
 
 /* Function to create a new queue and initialize it */
