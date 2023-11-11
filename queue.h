@@ -5,23 +5,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Typedef */
+typedef struct Queue* Queue;
+typedef struct Queue* queue;
+
 /* Structs */
-struct QueueNode {
+struct Node {
     void *data;
-    struct QueueNode *next;
+    struct Node *next;
 };
 
 struct Queue {
-    struct QueueNode *front;
-    struct QueueNode *rear;
+    struct Node *front;
+    struct Node *rear;
 };
 
 /* Functions */
-struct Queue *MakeEmptyQueue();
-int IsEmptyQueue(struct Queue *queue);
-void Enqueue(struct Queue *queue,void *data);
-void *Dequeue(struct Queue *queue);
-void *Front(struct Queue *queue);
-struct Queue *CloneQueue(struct Queue *queue);
+struct Queue *initializeQueue(void);
+int isEmpty(struct Queue *queue);
+void enqueue(struct Queue *queue,void *data);
+void *dequeue(struct Queue *queue);
+void *front(struct Queue *queue);
+void *rear(struct Queue *queue);
+struct Queue *cloneQueue(struct Queue *queue);
+void destroyQueue(struct Queue *queue);
 
 #endif
